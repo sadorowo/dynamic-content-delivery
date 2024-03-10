@@ -1,0 +1,72 @@
+@import url('data/custom-style.css');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --text: #fff;
+    --background: #2f3136;
+    --button-color: #a8c0ff;
+    --button-color-hover: #c4d5ff;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#internal__start-page, #internal__template {
+    transition: opacity 0.2s ease-in-out;
+}
+
+#internal__template {
+    display: none;
+}
+
+#internal__start-page {
+    width: 100%;
+    height: 100%;
+
+    gap: 5px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+
+    background-color: var(--background) !important;
+}
+
+#internal__start-page > *:is(h1, h2, h3, h4, h5, h6, p, span) {
+    color: var(--text);
+}
+
+#internal__start-page > input {
+    border-radius: 10px;
+    text-align: center;
+    height: 50px;
+    border: none;
+}
+
+#internal__start-page > input:focus {
+    border: none;
+    outline: none;
+}
+
+#internal__start-page > button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    height: 50px;
+    min-width: 100px;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    transition: background-color 0.2s ease-in-out;
+}
+
+#internal__start-page > button:hover {
+    background-color: var(--button-color-hover);
+}
